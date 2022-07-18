@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Hind", sans-serif;
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+/* #region SCROLLBAR */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/* #endregion */
+
+/* #region NAV DROPDOWN */
+.nav-dropdown-submenu {
+    @apply invisible absolute left-0 top-full z-50 w-[220px] translate-y-[10px] text-white bg-black p-2 opacity-0 shadow-xl transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100;
+}
+
+.active-nav-dropdown .icon {
+    @apply rotate-0;
+}
+
+.appearance-none,
+.appearance-none::-webkit-outer-spin-button,
+.appearance-none::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+/* #endregion */
+
+/* #region COLOR CHECKBOX */
+
+.color-checkbox label:before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: -3px;
+    transform: translateY(-50%);
+    border: solid 1px #000;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.color-checkbox input[type="checkbox"]:checked + label:before {
+    opacity: 0.5;
+}
+
+.color-checkbox label:hover {
+    opacity: 0.5;
+}
+
+.color-checkbox label {
+    transition: opacity 0.2s;
+}
+
+/* #endregion */

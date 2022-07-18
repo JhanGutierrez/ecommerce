@@ -1,0 +1,51 @@
+:root {
+    --primary-color: #52ab98;
+}
+
+/* FILTER COLORS */
+.green-filter-color {
+    background-color: #57d657;
+}
+
+.red-filter-color {
+    background-color: #dd4646;
+}
+
+.black-filter-color {
+    background-color: #1f1f1f;
+}
+
+.white-filter-color {
+    background-color: #fff;
+}
+
+.fadeOut {
+    -webkit-animation: fadeOut 0.8s;
+            animation: fadeOut 0.8s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* -- NAV DROPDOWN SUBMENU -- */
+.nav-dropdown-submenu {
+    @apply border-primary invisible absolute left-0 top-full z-20 w-[220px] translate-y-[10px] border-t-2 bg-white p-2 opacity-0 shadow-xl transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100;
+}
+
+.active-nav-dropdown .icon {
+    @apply rotate-0;
+}
+
